@@ -1,0 +1,179 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:RFM95W-868S2 U3
+U 1 1 5ED42368
+P 5650 2450
+F 0 "U3" H 5650 3131 50  0000 C CNN
+F 1 "RFM95W-868S2" H 5650 3040 50  0000 C CNN
+F 2 "RF_Module:HOPERF_RFM9XW_SMD" H 2350 4100 50  0001 C CNN
+F 3 "https://www.hoperf.com/data/upload/portal/20181127/5bfcbea20e9ef.pdf" H 2350 4100 50  0001 C CNN
+F 4 "RFM95W-868S2-ND" H 5650 2450 50  0001 C CNN "DigiKey"
+	1    5650 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 5ED435F5
+P 5550 3250
+F 0 "#PWR022" H 5550 3000 50  0001 C CNN
+F 1 "GND" H 5555 3077 50  0000 C CNN
+F 2 "" H 5550 3250 50  0001 C CNN
+F 3 "" H 5550 3250 50  0001 C CNN
+	1    5550 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3050 5550 3150
+Wire Wire Line
+	5750 3050 5750 3150
+Wire Wire Line
+	5750 3150 5650 3150
+Connection ~ 5550 3150
+Wire Wire Line
+	5550 3150 5550 3250
+Wire Wire Line
+	5650 3050 5650 3150
+Connection ~ 5650 3150
+Wire Wire Line
+	5650 3150 5550 3150
+Wire Wire Line
+	5650 1700 5650 1950
+$Comp
+L Device:C C16
+U 1 1 5ED43DB2
+P 6850 1200
+F 0 "C16" H 6965 1246 50  0000 L CNN
+F 1 "1u" H 6965 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6888 1050 50  0001 C CNN
+F 3 "~" H 6850 1200 50  0001 C CNN
+F 4 "1276-6524-1-ND " H 6850 1200 50  0001 C CNN "DigiKey"
+	1    6850 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 950  6850 1050
+$Comp
+L power:GND #PWR020
+U 1 1 5ED449B2
+P 6450 2200
+F 0 "#PWR020" H 6450 1950 50  0001 C CNN
+F 1 "GND" H 6455 2027 50  0000 C CNN
+F 2 "" H 6450 2200 50  0001 C CNN
+F 3 "" H 6450 2200 50  0001 C CNN
+	1    6450 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 1350 6850 1450
+Wire Wire Line
+	6350 1950 6350 2150
+Wire Wire Line
+	6350 2150 6200 2150
+Wire Wire Line
+	4700 2150 5150 2150
+Wire Wire Line
+	5150 2250 4700 2250
+Wire Wire Line
+	4700 2350 5150 2350
+Wire Wire Line
+	5150 2450 4700 2450
+Text GLabel 4700 2150 0    50   Input ~ 0
+RFM_SCK
+Text GLabel 4700 2350 0    50   Input ~ 0
+RFM_MISO
+Text GLabel 4700 2250 0    50   Input ~ 0
+RFM_MOSI
+Text GLabel 4700 2450 0    50   Input ~ 0
+RFM_NSS
+$Comp
+L power:PRI_HI #PWR021
+U 1 1 5EE32BF0
+P 5650 1700
+F 0 "#PWR021" H 5650 1550 50  0001 C CNN
+F 1 "PRI_HI" H 5665 1873 50  0000 C CNN
+F 2 "" H 5650 1700 50  0001 C CNN
+F 3 "" H 5650 1700 50  0001 C CNN
+	1    5650 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PRI_HI #PWR019
+U 1 1 5EE338E0
+P 6850 950
+F 0 "#PWR019" H 6850 800 50  0001 C CNN
+F 1 "PRI_HI" H 6865 1123 50  0000 C CNN
+F 2 "" H 6850 950 50  0001 C CNN
+F 3 "" H 6850 950 50  0001 C CNN
+	1    6850 950 
+	1    0    0    -1  
+$EndComp
+Text GLabel 6300 2750 2    50   Input ~ 0
+RFM_DIO1
+Text GLabel 6300 2850 2    50   Input ~ 0
+RFM_DIO0
+Wire Wire Line
+	6150 2750 6300 2750
+Wire Wire Line
+	6300 2850 6150 2850
+Text GLabel 4700 2650 0    50   Input ~ 0
+RFM_RST
+Wire Wire Line
+	4700 2650 5150 2650
+NoConn ~ 6150 2350
+NoConn ~ 6150 2450
+NoConn ~ 6150 2550
+NoConn ~ 6150 2650
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5EF06D6C
+P 6200 2150
+F 0 "TP1" H 6258 2268 50  0000 L CNN
+F 1 "TestPoint" H 6258 2177 50  0000 L CNN
+F 2 "MILDA:Curved_RF" H 6400 2150 50  0001 C CNN
+F 3 "~" H 6400 2150 50  0001 C CNN
+	1    6200 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Antenna_Shield AE1
+U 1 1 5EF09B5A
+P 6350 1750
+F 0 "AE1" H 6494 1789 50  0000 L CNN
+F 1 "Antenna_Shield" H 6494 1698 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Molex_73251-1153_EdgeMount_Horizontal" H 6350 1850 50  0001 C CNN
+F 3 "~" H 6350 1850 50  0001 C CNN
+F 4 "WM5534-ND" H 6350 1750 50  0001 C CNN "DigiKey"
+	1    6350 1750
+	1    0    0    -1  
+$EndComp
+Connection ~ 6200 2150
+Wire Wire Line
+	6200 2150 6150 2150
+Wire Wire Line
+	6450 1950 6450 2200
+$Comp
+L power:GND #PWR0112
+U 1 1 5ED6C748
+P 6850 1450
+F 0 "#PWR0112" H 6850 1200 50  0001 C CNN
+F 1 "GND" H 6855 1277 50  0000 C CNN
+F 2 "" H 6850 1450 50  0001 C CNN
+F 3 "" H 6850 1450 50  0001 C CNN
+	1    6850 1450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
